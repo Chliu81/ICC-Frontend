@@ -1,37 +1,64 @@
-<!--
-Author: Charles Liu
-Program: Intro to Cloud Computing Assignment 2
--->
-
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html>
 
-    <head>
-        <title>Charles Liu - Assignment 2</title>
-        <meta charset="utf-8">
-        <meta name = "description" content = "This is an amazing, awesome website">
-        
-        <script type="text/javascript" src="main.js"></script>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-Dark-icons.css">
+    <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
+    <script type="text/javascript" src="main.js"></script>
+</head>
 
-    <body>
-        
-        <h1>Hi! Welcome to my second cloud computing assignment! My name is Charles Liu and my net ID is cl5522.</h1>
-        Please post your questions: 
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#">Smart Photo Album &amp; Voice Search</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Voice Search</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Image Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page landing-page">
+        <section class="clean-block clean-hero" style="color: rgba(9, 162, 255, 0.85);background: url(&quot;assets/img/tech/image4.jpg&quot;) round;">
+            <div class="text">
+                <h2>Cloud Computer Final Project</h2>
+                <p>Use voice search below and for image search please go to the next page.</p>
+            </div>
+        </section>
+        <section class="clean-block clean-info dark">
+            <div class="container">
+                <div class="block-heading">Please post your questions: 
         <input type="text" id="post"/>
         <input type="Submit" value = "Submit" onclick="post()"/>
         <p></p>
         <output type="textarea" id="output1" name="output1"></output>
-        <br><br>
-        
-        Please input tag(s) separated by commas (no spaces) to search for answers: <input type="text" id="answers"/>
-        <input type="Submit" value ="Submit" onclick="search()"/>
-        <p></p>
-        <output type="textarea" id="output2" name="output2"></output>
-        <br>
-        <ul id="myList"></ul>
-    </body>
+        <br><br><a href = "https://7c5adbk1af.execute-api.us-east-1.amazonaws.com/stage1/search">
+<img put a src="assets/img/microphone-342.png" width="25" height="25" />
+</a>
+
+                    <div></div>
+                    <h2 class="text-info"></h2>
+                    <p>Click on the mic button and start talking. When you are done tap on it again to perform the voice search</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="footer-copyright">
+            <p>Project created by: Charles, Fahim, Ty, Vittorio</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src="assets/js/vanilla-zoom.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
 </html>
-
-
