@@ -17,12 +17,20 @@ function search(){
     const processed_obj = JSON.stringify(data);
     const obj = JSON.parse(processed_obj);
     var post_lst = obj["Successfully Searched"];
-    let iterator = post_lst.values();
-    var idx = 1;
-    var paragraph = ""
-    for (let i = 0; i < post_lst.length; ++i){
-      paragraph += i+1 + ": "+ post_lst[i] + "\n" ;
-      idx +=1;
+    //post_lst.foreach((ele)=>'https://cc-store-photos.s3.amazonaws.com/' + ele)
+    console.dir(post_lst);
+    //let iterator = post_lst.values();
+
+    for (let i = 0; i < post_lst.length; ++i)
+    {
+        
+      let new_img = document.createElement("img");
+      new_img.src = `https://cc-store-photos.s3.amazonaws.com/${post_lst[i]}`;
+      new_img.style.float = "left";
+      new_img.style.padding="10px";
+      new_img.style.width="200px";
+      document.getElementById("gallery_out").appendChild(new_img);
+    
     }
     document.getElementById('output2').value = paragraph
     
