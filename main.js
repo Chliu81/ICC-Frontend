@@ -2,7 +2,7 @@
 
 function search(){
   const raw_tag = document.getElementById("answers").value;
-  url = 'https://ciw53fwcnk.execute-api.us-east-1.amazonaws.com/Dev/answers?q=' + raw_tag
+  url = 'https://7c5adbk1af.execute-api.us-east-1.amazonaws.com/stage1/search?q=' + raw_tag
   fetch(url, {
     method: 'GET',
     mode: 'cors',
