@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Gallery</title>
+    <title>Upload a photo</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
@@ -12,6 +12,18 @@
     <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-Dark-icons.css">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -25,31 +37,31 @@
                 </ul>
             </div>
         </div>
-    </nav>    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1196.0.min.js"></script>
-    <script src="./s3_photoExample.js"></script>
-    <script>
+    </nav>
+    <!-- <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1196.0.min.js"></script> -->
+    <!-- <script>
        function getHtml(template) {
           return template.join('\n');
-       }
-       listAlbums();
-    </script>
+       } -->
+    <!-- </script> -->
 <main class="page gallery-page">
     <section class="clean-block clean-gallery dark">
         <div class="container">
             <div class="block-heading">
-                <h2 class="text-info">Image Search</h2>
+                <h2 class="text-info">Upload a photo</h2>
                 <section class="clean-block clean-info dark">
-            <div class="container">
-                <div class="block-heading">Input a request for a photo: <input type="text" id="answers"/>
-        <input type="Submit" value ="Submit" onclick="search()"/>
-        <p></p>
+          <form>
+            <input type="file" id="new-photo" >
+            <div class="block-heading">Please input any tags you would like to add to your photo. Please separate by a space(e.g. 'tag1 tag2'): <input type = "text" id="extra-tags">
+            <button type="button" name="button" onclick="upload_photo()">Submit</button>
+          </form>
+        <p id="confirmation"></p>
         <output type="textarea" id="output2" name="output2"></output>
-        <div id="gallery_out"></div>
+        <!-- <div id="gallery_out"></div> -->
         <br>
-        <ul id="myList"></ul>
+        <!-- <ul id="myList"></ul> -->
                 <p></p>
             </div>
-            
         </div>
     </section>
 </main>
